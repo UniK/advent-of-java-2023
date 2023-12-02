@@ -18,7 +18,8 @@ public class Solution {
 
         Path path = Paths.get("day01/input.txt");
         try (Stream<String> lines = Files.lines(path)) {
-            calibrationValueList = lines.map(line -> line.replaceAll("\\D+", ""))
+            calibrationValueList = lines
+                    .map(line -> line.replaceAll("\\D+", ""))
                     .map(line -> {
                                 char firstLetter = line.charAt(0);
                                 char lastLetter = line.charAt(line.length() - 1);
